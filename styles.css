@@ -1,0 +1,81 @@
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  background-color: rgb(18, 17, 17);
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25.75rem;
+}
+
+.add-todo, .added-todo-text {
+  display: grid;
+  grid-template-columns: 10rem 8rem 5rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+div, .delete-todo__button{
+  margin-bottom: 1rem;
+}
+
+input {
+  background-color: rgb(127, 255, 212);
+  height: 2rem;
+  border: 2px solid white;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1rem;
+  box-sizing: border-box;
+}
+
+.add-todo__button {
+  height: 2rem;
+  background-color: rgb(127, 255, 212);
+  border: 2px solid white;
+  font-weight: bold;
+  line-height: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.add-todo__button:hover {
+  background-color: rgb(99, 198, 165);
+}
+
+.delete-todo__button {
+  height: 2rem;
+  background-color: rgb(255, 157, 127);
+  border: 2px solid white;
+  font-weight: bold;
+  line-height: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.delete-todo__button:hover {
+  background-color: rgb(203, 125, 101);
+}
+
+.text-validation {
+  font-size: 0.5rem;
+  color: rgb(203, 125, 101);
+  transform: translateY(-0.3rem);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.add-todo.error .text-validation {
+  opacity: 1;
+}
